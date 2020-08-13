@@ -32,8 +32,11 @@ class _MyListState extends State<MyList> {
     return Scaffold(
       appBar: MyAppBar(),
       drawer: Drawer(),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _widgetOptions,
+//      Center(
+//        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
